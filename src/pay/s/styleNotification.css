@@ -1,0 +1,411 @@
+html {
+    font-family: oxygen, sans-serif;
+    height: 100%
+}
+
+body {
+    font-family: oxygen, sans-serif;
+    background: url("/pay/s/background.svg") no-repeat fixed center center/cover;
+    height: 100%
+}
+
+.main-content {
+    background-color: #fff;
+    padding-left: 0;
+    padding-right: 0;
+    background: repeating-linear-gradient(45deg, white, white 10px, #F2F2F2 11px, #F2F2F2 12px)
+}
+
+.warp-clas {
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+
+.warp-clasFailed {
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+
+::-webkit-scrollbar {
+    width: 0
+}
+
+::-webkit-scrollbar:horizontal {
+    width: 0
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #fff;
+    border-radius: 1px
+}
+
+::-webkit-scrollbar-thumb {
+    background: default;
+    border-radius: 0
+}
+
+.main-header {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    overflow: hidden
+}
+
+.main-header h4 {
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 700;
+    color: #036;
+    margin-bottom: 0
+}
+
+.main-header span {
+    padding-right: 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #ccc
+}
+
+.main-header span:hover {
+    color: #000
+}
+
+.main-header label {
+    color: #ccc;
+    font-size: 25
+}
+
+.main-detail {
+    background-color: #e6ffe6;
+    padding: 0 10px
+}
+
+.dtl_l {
+    background: 0 0;
+    margin: 0;
+    padding: 15px 0;
+    border: 1px solid transparent
+}
+
+.jumlah_l {
+    font-size: 14px;
+    margin-bottom: 0
+}
+
+.dtl_l span {
+    color: #036
+}
+
+.rp_l {
+    vertical-align: 12px;
+    font-weight: 700
+}
+
+.amount_l {
+    font-size: 28px
+}
+
+.dtl_l a {
+    color: #102c42;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.dtl_l a:hover {
+    color: #008ae6
+}
+
+.sc {
+    padding: 0 10px 15px
+}
+
+.sc span {
+    color: #00b300;
+    font-size: 30px
+}
+
+.sc p {
+    color: #00b300;
+    font-size: 12px
+}
+
+.ttl {
+    padding: 10px 15px
+}
+
+.payment-category {
+    background-color: #fff;
+    padding: 15px 20px;
+    margin: 10px
+}
+
+.payment-category span {
+    font-size: 15px;
+    color: #036;
+    margin-bottom: 0
+}
+
+.payment-category label {
+    color: #102c42;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0
+}
+
+.payment-category p {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #036;
+    letter-spacing: .2px
+}
+
+.payment-category a {
+    font-size: 11px;
+    margin-bottom: 0;
+    color: #036;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.payment-category a:hover {
+    color: #69f
+}
+
+::placeholder {
+    font-size: 18px;
+    color: #000
+}
+
+.main-footer {
+    cursor: pointer;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+    overflow: hidden
+}
+
+.main-footer input[type=submit] {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #036;
+    padding: 15px 20px;
+    border-radius: 0
+}
+
+.main-footer input[type=submit]:hover {
+    background-color: #001a33
+}
+
+@media screen and (max-width:567px) {
+    .container {
+        max-width: 100%;
+        height: 100%
+    }
+
+    .main-content {
+        max-width: 100%;
+        height: 100%;
+        margin-bottom: 0
+    }
+
+    .cc-form {
+        padding: 0
+    }
+
+    .cc_form {
+        height: 100% !important
+    }
+}
+
+@media screen and (min-width:568px) {
+    .container {
+        max-width: 420px !important
+    }
+
+    .warp-clas {
+        height: 420px !important
+    }
+
+    .warp-clasFailed {
+        height: 345px !important
+    }
+
+    #snackbar {
+        color: #fff
+    }
+}
+
+@media screen and (max-height:530px) and (min-width:568px) {
+    .container {}
+
+    .main-header {
+        position: relative
+    }
+
+    .main-footer {
+        position: relative
+    }
+
+    #snackbar {
+        color: #036
+    }
+}
+
+@media screen and (min-height:681px) {
+    .container {
+        height: 100% !important
+    }
+}
+
+@media screen and (min-width:569px) {
+    .modal-dialog {
+        max-width: 400px !important
+    }
+}
+
+@media screen and (min-width:568px) and (max-width:575px) {
+    .modal-dialog {
+        margin: 8px auto 28px !important
+    }
+}
+
+.load {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4)
+}
+
+#loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    vertical-align: middle;
+    text-align: center
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+input:focus {
+    outline: 0
+}
+
+input.question {
+    font-size: 48px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    width: 80%;
+    background: transparent;
+    transition: padding-top .2s ease, margin-top .2s ease;
+    overflow-x: hidden
+}
+
+input.question+label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: .1px;
+    border-top: 1px solid #036;
+    -webkit-transition: width .4s ease;
+    transition: width .4s ease;
+    height: 0
+}
+
+input.question:focus+label {
+    width: 100%
+}
+
+input.question:focus, input.question:valid {
+    padding-top: 10px
+}
+
+input.question:focus+label>span, input.question:valid+label>span {
+    top: -70px;
+    font-size: 13px;
+    color: #036
+}
+
+input.question:valid+label {
+    border-color: #036
+}
+
+input.question:invalid {
+    box-shadow: none
+}
+
+input.question+label>span {
+    position: absolute;
+    top: -70px;
+    font-size: 13px;
+    color: #036
+}

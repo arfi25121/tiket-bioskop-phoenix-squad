@@ -1,0 +1,29 @@
+<?php
+require './include/lib.php';
+
+parameter_must_exist('id');
+
+$query = $db->prepare("SELECT *
+FROM `jadwal_kursi`,pembelian_tiket, jadwal_film, jadwal_waktu
+where pembelian_tiket.id=id_pembelian and 
+jadwal_film.id_jadwal=pembelian_tiket.id_jadwal_film and
+jadwal_waktu.jam = pembelian_tiket.jam and
+jadwal_waktu.id_jadwal = pembelian_tiket.id_jadwal_film and
+jadwal_kursi.id = :id");
+$query->execute([
+    'id' => $_REQUEST['id']
+]);
+$row = $query->fetch();
+echo "<pre>Data Tiket\n\n";
+// print_r($row);
+?>
+</pre>
+<div id="qrcode"></div>
+<script src="/static/js/qrcode.min.js" ></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width: 100,
+        height: 100
+    });
+    qrcode.makeCode("<?php echo hash('md5', $row['id']); ?>");
+    </script>
