@@ -104,7 +104,7 @@ if ($_GET ?? false and $_GET['action'] == 'add_jadwal' and $_POST) {
             <!-- multiple select row Datatable start -->
             <div class="card-box mb-30">
                 <div class="pd-20">
-                    <h1 class="text-dark h3">Jadawal Film</h1>
+                    <h1 class="text-dark h3">Jadwal Film</h1>
                 </div>
                 <div class="pb-20">
                     <ul class="list-group">
